@@ -27,7 +27,7 @@
 # print(fruits)
 
 # popped_fruits = fruits.pop()
-# print(popped_fruits)
+# print(popped_fruits)  for given last element of list
 
 # index = fruits.index("orenge")
 # print(index)
@@ -68,4 +68,41 @@ print(lst)
 print([x**2 for x in range(10)]) 
 '''
 List comprehension ke liye do chij chiye pahali hame kya banana hai. 
-or dusri kitni baar banana hai '''
+or dusri kitni baar banana hai 
+
+Basic Syntax = [expression for item in treable]'''
+
+
+#Basic List Comprehension
+
+Squere = [num**2 for num in range(10)]
+print(Squere)
+'''Output=[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]'''
+
+#List Comprehension With Conditional statement
+
+lst = []
+for i in range(10):
+     if i%2==0:
+        lst.append(i)
+print(lst)                      # This is normal syntax 
+
+even_number = [num for num in range(10) if num%2==0]
+print(even_number)
+
+### Nasted List Coprehension
+
+lst1 = [1,2,3,4,5]
+lst2 = ['a','b','c','d','e']
+
+pair = [(x,y)for x in lst1 for y in lst2]
+print(pair)
+
+### List Comprehension with function calls
+
+words = ['Lokesh','Solanki','is','a','B.Tech','Student']
+lenght = [len(word) for word in words]
+print(lenght) 
+'''
+output[6, 7, 2, 1, 6, 7]'''
+
